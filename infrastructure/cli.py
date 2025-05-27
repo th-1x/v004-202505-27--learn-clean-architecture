@@ -22,6 +22,14 @@ class TodoCLI:
                 for t in todos:
                     print(f" - [{ 'x' if t.completed else ' ' }] {t.id}: {t.title}")
             elif choice == "3":
+                tid = int(input("Todo ID to complete: "))
+                try:
+                    todo = self.complete_todo.execute(tid)
+                    print(f"✅ Marked complete: {todo.id} - {todo.title}")
+                except ValueError:
+                    print("❌ Todo not found")
+            elif choice == "4":
                 break
+
             else:
                 print("❌ Invalid choice.")

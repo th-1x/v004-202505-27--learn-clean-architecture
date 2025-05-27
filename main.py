@@ -1,9 +1,8 @@
 # main.py
-from usecases.create_todo import CreateTodoUseCase
 from infrastructure.in_memory_todo_repo import InMemoryTodoRepo
+from infrastructure.cli import TodoCLI
 
-repo = InMemoryTodoRepo()
-usecase = CreateTodoUseCase(repo)
-
-todo = usecase.execute("Learn Clean Architecture")
-print(f"Created: {todo.id} - {todo.title} - {todo.completed}")
+if __name__ == "__main__":
+    repo = InMemoryTodoRepo()
+    cli = TodoCLI(repo)
+    cli.run()

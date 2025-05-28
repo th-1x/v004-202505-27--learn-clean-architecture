@@ -1,0 +1,21 @@
+{
+  "ruby_version": "3.3.8",
+  "bundler": true,
+  "minitest": true,
+  "file_structure": true,
+  "syntax_check": true,
+  "unit_tests": {
+    "runs": 24,
+    "assertions": 48,
+    "failures": 0,
+    "errors": 0
+  },
+  "integration_tests": {
+    "runs": 2,
+    "assertions": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "demo": true,
+  "docker_setup": true
+}

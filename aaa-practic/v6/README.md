@@ -28,17 +28,43 @@ v6/
 
 ## Installation
 
+### Option 1: Local Ruby Installation
+
 1. Install Ruby (version 2.7 or higher)
 2. Install dependencies:
    ```bash
    bundle install
    ```
 
+### Option 2: Docker (Recommended)
+
+1. Install Docker and Docker Compose
+2. Build and run using Docker:
+   ```bash
+   # Build the image
+   ./docker.sh build
+   
+   # Or use Docker Compose
+   docker compose build
+   ```
+
 ## Usage
+
+### Local Ruby Usage
 
 Run the application:
 ```bash
 ruby main.rb
+```
+
+### Docker Usage
+
+```bash
+# Interactive CLI
+./docker.sh run
+
+# Or with Docker Compose
+docker compose up todo-cli
 ```
 
 This will start an interactive CLI with the following options:
@@ -49,7 +75,28 @@ This will start an interactive CLI with the following options:
 5. Count Todos
 6. Exit
 
+### Docker Commands
+
+```bash
+# Build image
+./docker.sh build
+
+# Run tests
+./docker.sh test
+
+# Run demo
+./docker.sh demo
+
+# Open shell in container
+./docker.sh shell
+
+# Clean up containers and images
+./docker.sh clean
+```
+
 ## Testing
+
+### Local Testing
 
 Run all tests:
 ```bash
@@ -60,6 +107,16 @@ ruby tests/test_integration.rb
 Run tests with verbose output:
 ```bash
 ruby tests/test_use_cases.rb -v
+```
+
+### Docker Testing
+
+```bash
+# Run all tests in container
+./docker.sh test
+
+# Or with Docker Compose
+docker compose up todo-tests
 ```
 
 ## Architecture Details

@@ -3,17 +3,21 @@
 .git/
 .gitignore
 
-# Ignore documentation
-*.md
+# Ignore documentation (but keep README.md for reference)
 CONVERSION_PLAN.md
+DEPLOYMENT.md
+DOCKER.md
+PROJECT_OVERVIEW.md
 
 # Ignore development files
 .bundle/
 vendor/bundle/
 
-# Ignore test files (optional - remove if you want tests in container)
+# Keep test files, demo, and verification scripts in container
 # tests/
 # run_tests.rb
+# demo.rb
+# verify.rb
 
 # Ignore local Ruby version files
 .ruby-version

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  todo-cli:
+    build: .
+    container_name: ruby-todo-cli
+    stdin_open: true  # Keep STDIN open for interactive CLI
+    tty: true         # Allocate a pseudo-TTY for interactive mode
+    volumes:
+      # Optional: Mount local directory for development
+      - .:/app
+    environment:
+      - RUBY_ENV=production
+    # Override default command for interactive mode
+    command: ruby main.rb
+
+  # Service for running tests
+  todo-tests:
+    build: .
+    container_name: ruby-todo-tests
+    volumes:
+      - .:/app
+    environment:
+      - RUBY_ENV=test
+    command: ruby run_tests.rb
+
+  # Service for running demo
+  todo-demo:
+    build: .
+    container_name: ruby-todo-demo
+    volumes:
+      - .:/app
+    command: ruby demo.rb

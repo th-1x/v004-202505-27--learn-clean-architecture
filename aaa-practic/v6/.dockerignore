@@ -1,0 +1,38 @@
+# Docker ignore file for Ruby Todo CLI
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore documentation
+*.md
+CONVERSION_PLAN.md
+
+# Ignore development files
+.bundle/
+vendor/bundle/
+
+# Ignore test files (optional - remove if you want tests in container)
+# tests/
+# run_tests.rb
+
+# Ignore local Ruby version files
+.ruby-version
+.rvmrc
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+tmp/
+temp/

@@ -1,9 +1,12 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-net --allow-read main.ts"
+    "dev": "deno run --watch --allow-net --allow-read --allow-env main.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
-    "express": "npm:express@^5.1.0"
+    "express": "npm:express@^5.1.0",
+    "hono": "npm:hono@^4.7.10",
+    "swagger-jsdoc": "npm:swagger-jsdoc@^6.2.8",
+    "swagger-ui-express": "npm:swagger-ui-express@^5.0.1"
   }
 }
